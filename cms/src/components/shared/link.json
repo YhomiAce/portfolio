@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "maxLength": 500
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "github",
+        "linkedin",
+        "email",
+        "website",
+        "other"
+      ],
+      "default": "other"
+    }
+  }
+}

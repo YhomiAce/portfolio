@@ -1,0 +1,395 @@
+{
+  "$comment": "Portfolio content merged from Lateef Kareem's CVs. Seeded into Strapi on first start and bundled into the web app as its offline fallback. Keep cms/src/seed/portfolio.json and web/src/content/portfolio.json identical (run `npm run sync:content` in web/).",
+  "profile": {
+    "name": "Lateef Yomi Kareem",
+    "headline": "Senior Backend Engineer building distributed systems for fintech",
+    "summary": [
+      "I'm a senior backend engineer with 6+ years of experience designing, building and operating distributed systems for fintech platforms. I build event-driven microservices in Java (Spring Boot), Go and TypeScript (NestJS) that process 10M+ daily transactions with sub-100ms latency and zero-downtime releases.",
+      "Having worked on teams without a dedicated DevOps engineer, I've owned the full delivery lifecycle: Linux servers, CI/CD pipelines, containers, Kubernetes clusters and infrastructure as code with Terraform on AWS, GCP and DigitalOcean.",
+      "A full-stack background with React, Next.js and React Native means I can carry a feature from the database to the interface. I own features end to end, from design and code review through deployment, and I care about correctness wherever money moves."
+    ],
+    "location": "Lagos, Nigeria",
+    "email": "kareemyomi91@gmail.com",
+    "availableForWork": true,
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/YhomiAce", "kind": "github" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/kareem-yhomi", "kind": "linkedin" },
+      { "label": "Email", "url": "mailto:kareemyomi91@gmail.com", "kind": "email" }
+    ],
+    "highlights": [
+      { "value": "6+", "label": "years building and running production systems" },
+      { "value": "10M+", "label": "daily transactions processed with zero Kafka lag" },
+      { "value": "<100ms", "label": "latency on 10M+ daily eligibility checks" },
+      { "value": "99.9%", "label": "uptime on an SMS gateway serving 5M+ customers" }
+    ],
+    "education": [
+      {
+        "qualification": "BTech, Computer Engineering",
+        "institution": "Ladoke Akintola University of Technology",
+        "startYear": 2013,
+        "endYear": 2018
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "company": "Moniepoint Microfinance Bank",
+      "role": "Senior Backend Engineer",
+      "location": "Lagos, Nigeria",
+      "startDate": "2025-08-01",
+      "endDate": null,
+      "current": true,
+      "order": 1,
+      "bullets": [
+        "Built and scaled a referral and reward platform processing 10M+ daily transactions with zero Kafka lag, enabling instant rewards for card payments, transfers and VAS purchases.",
+        "Architected event-driven microservices that consume payment and VAS events from Kafka and RabbitMQ across 50+ customer touchpoints and publish results to internal topics for downstream services.",
+        "Integrated with the Core Banking Application to post journal transactions for cashback deposits and withdrawals, with idempotent processing that prevents duplicate payouts.",
+        "Designed a shared reward queue that lets 15+ internal teams publish reward events asynchronously, reducing integration time by 60%.",
+        "Optimised MySQL and Google Cloud Spanner queries with Redis caching to keep 10M+ daily reward eligibility checks under 100ms.",
+        "Developed RESTful and gRPC APIs for mobile banking, including referral code generation, influencer campaign tracking and reward wallet management.",
+        "Created a gamification reward engine that tracks customer tasks (funding an account, bill payments, data purchases) and distributes cashback automatically.",
+        "Deploy Spring Boot services on Kubernetes with CI/CD pipelines that cut deployment time by 40% with zero-downtime releases, monitored with Grafana, Loki and New Relic."
+      ],
+      "tech": ["Java", "Spring Boot", "Kafka", "RabbitMQ", "MySQL", "Cloud Spanner", "Redis", "gRPC", "Kubernetes", "Grafana", "Loki", "New Relic"]
+    },
+    {
+      "company": "MISPay",
+      "role": "Senior Backend Developer",
+      "location": "Riyadh, Saudi Arabia",
+      "startDate": "2025-01-01",
+      "endDate": null,
+      "current": true,
+      "order": 2,
+      "bullets": [
+        "Build and operate Go, NestJS and Java microservices for a Buy Now, Pay Later platform on Kubernetes and GCP.",
+        "Built a high-performance change data capture (CDC) pipeline in Go and Kafka, using goroutines for concurrent processing to eliminate consumer lag and achieve near-real-time data sync.",
+        "Engineered in-house applications: a Backoffice system that streamlines staff operations and a Merchant Panel for registered merchants.",
+        "Manage and optimise data storage with PostgreSQL, MongoDB and Redis.",
+        "Manage containerised delivery with Docker, Terraform and GitLab across development and production environments.",
+        "Built internal packages that standardise and speed up service development across teams."
+      ],
+      "tech": ["Go", "NestJS", "Java", "Kafka", "PostgreSQL", "MongoDB", "Redis", "Kubernetes", "GCP", "Terraform", "GitLab CI"]
+    },
+    {
+      "company": "Artisan Technology",
+      "role": "Full Stack Developer (Contract)",
+      "location": "Lagos, Nigeria",
+      "startDate": "2024-01-01",
+      "endDate": "2025-09-30",
+      "current": false,
+      "order": 3,
+      "bullets": [
+        "Built and maintained scalable REST APIs in Go with Gin, consumed by a Next.js frontend.",
+        "Implemented gRPC with Protocol Buffers over HTTP/2 for inter-service communication, reducing network latency by 40% compared to REST.",
+        "Used goroutines for concurrent request handling and efficient resource utilisation.",
+        "Used RabbitMQ for asynchronous messaging between services, with PostgreSQL for storage and Redis for caching.",
+        "Built reusable React and Next.js components and optimised front-end performance, reducing loading time by 30% across browsers.",
+        "Containerised services with Docker and deployed them on AWS EC2, with images stored in AWS ECR."
+      ],
+      "tech": ["Go", "Gin", "gRPC", "Protocol Buffers", "RabbitMQ", "PostgreSQL", "Redis", "Next.js", "React", "Docker", "AWS"]
+    },
+    {
+      "company": "CobbleWeb",
+      "role": "Full Stack Developer (Contract)",
+      "location": "London, United Kingdom",
+      "startDate": "2022-11-01",
+      "endDate": "2023-12-31",
+      "current": false,
+      "order": 4,
+      "bullets": [
+        "Built server-side applications and REST and GraphQL APIs for online marketplaces with TypeScript, Node.js, Express, NestJS and Fastify.",
+        "Built dynamic, responsive user interfaces with React and Next.js, with global state in Redux Toolkit.",
+        "Worked across MongoDB, PostgreSQL and MySQL for data storage and retrieval.",
+        "Wrote unit and end-to-end tests with Jest.",
+        "Containerised services with Docker and Docker Compose, deployed them on AWS EC2, and automated build, test and deployment with GitHub Actions.",
+        "Built internal packages that streamline development processes."
+      ],
+      "tech": ["TypeScript", "Node.js", "NestJS", "Fastify", "Express", "GraphQL", "React", "Next.js", "PostgreSQL", "MongoDB", "Docker", "AWS", "GitHub Actions"]
+    },
+    {
+      "company": "Scelloo",
+      "role": "Backend Developer",
+      "location": "Lagos, Nigeria",
+      "startDate": "2020-01-01",
+      "endDate": "2022-11-30",
+      "current": false,
+      "order": 5,
+      "bullets": [
+        "Designed and built REST APIs on a microservice architecture with Node.js and Express, integrating GraphQL for flexible data querying.",
+        "Managed and optimised PostgreSQL and MongoDB (Mongoose) databases.",
+        "Ensured reliability with Jest unit and end-to-end tests gating every release in GitHub Actions CI/CD pipelines.",
+        "Deployed microservices on AWS EC2 and managed Docker images with AWS ECR."
+      ],
+      "tech": ["Node.js", "Express", "GraphQL", "PostgreSQL", "MongoDB", "Jest", "Docker", "AWS", "GitHub Actions"]
+    },
+    {
+      "company": "Novaji Introserve",
+      "role": "Full Stack Developer",
+      "location": "Lagos, Nigeria",
+      "startDate": "2019-09-01",
+      "endDate": "2022-01-31",
+      "current": false,
+      "order": 6,
+      "bullets": [
+        "Architected FiberOne, a high-availability SMS gateway processing millions of daily SMS requests at 99.9% uptime, serving 5M+ customers and enterprises.",
+        "Built a Twilio-like REST API for bulk SMS, OTP delivery and transactional messaging with webhook support, reducing client integration time by 60%.",
+        "Developed USSD applications for 1xBet (gaming), Universal Insurance (policy generation) and EasyPay (airtime, data and bill payments), reaching users without smartphone access.",
+        "Improved API response times by 30% through query optimisation, Redis caching and asynchronous processing.",
+        "Integrated multiple telecom aggregators with intelligent SMS routing, reducing delivery failures by 25%.",
+        "Implemented message queuing and retry mechanisms to handle high-volume concurrent SMS requests without service degradation.",
+        "Designed API authentication, rate limiting and billing for a multi-tenant SMS platform, plus admin dashboards for campaigns, analytics and billing.",
+        "Deployed to DigitalOcean droplets with GitHub Actions CI/CD, administering the underlying Linux servers, and maintained documentation that improved developer onboarding by 50%."
+      ],
+      "tech": ["REST APIs", "USSD", "Redis", "Message queues", "Webhooks", "DigitalOcean", "Linux", "GitHub Actions"]
+    }
+  ],
+  "skillGroups": [
+    {
+      "name": "Languages",
+      "order": 1,
+      "skills": ["Java", "Go", "TypeScript", "JavaScript", "SQL", "Bash", "Python", "PHP", "Dart"]
+    },
+    {
+      "name": "Backend frameworks",
+      "order": 2,
+      "skills": ["Spring Boot", "Hibernate / JPA", "NestJS", "Express", "Fastify", "AdonisJS", "Gin", "Fiber", "Echo", "Laravel", "gRPC / Protocol Buffers", "GraphQL / Apollo", "REST"]
+    },
+    {
+      "name": "Data and messaging",
+      "order": 3,
+      "skills": ["PostgreSQL", "MySQL", "Google Cloud Spanner", "MongoDB", "Redis", "Oracle", "MSSQL", "Kafka", "RabbitMQ", "Pub/Sub", "Change data capture", "Prisma", "TypeORM", "Sequelize", "Mongoose", "Drizzle", "GORM", "sqlc", "Goose"]
+    },
+    {
+      "name": "Cloud and DevOps",
+      "order": 4,
+      "skills": ["AWS (EC2, ECS/Fargate, ECR, EKS, S3, RDS, Lambda, IAM, VPC)", "GCP (GKE, Compute Engine, Cloud Run, Cloud NAT, Cloud Storage)", "DigitalOcean", "Docker", "Docker Compose", "Kubernetes", "Helm", "Helmfile", "ArgoCD", "Terraform", "Traefik", "Nginx", "GitHub Actions", "GitLab CI", "Jenkins", "Linux"]
+    },
+    {
+      "name": "Testing and observability",
+      "order": 5,
+      "skills": ["Jest", "Mocha", "JUnit", "Mockito", "Testcontainers", "Cypress", "Playwright", "Load testing", "Grafana", "Loki", "New Relic"]
+    },
+    {
+      "name": "Frontend and mobile",
+      "order": 6,
+      "skills": ["React", "Next.js", "Redux Toolkit", "Redux Saga", "Zustand", "TanStack Query", "React Hook Form", "Zod", "Tailwind CSS", "Material UI", "shadcn/ui", "React Native", "Flutter"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Referral and reward platform",
+      "slug": "referral-reward-platform",
+      "category": "product",
+      "role": "Senior Backend Engineer, Moniepoint",
+      "summary": "Event-driven Spring Boot platform that rewards customers instantly for card payments, transfers and VAS purchases, at 10M+ daily transactions with zero Kafka lag.",
+      "description": [
+        "Moniepoint's referral and reward platform listens to payment and VAS events from Kafka and RabbitMQ across 50+ customer touchpoints, evaluates reward rules and publishes results to internal topics for downstream services.",
+        "Cashback is paid by posting journal transactions to the Core Banking Application. Every payout is idempotent, so retries and replays never pay a customer twice.",
+        "A shared reward queue lets 15+ internal teams publish reward events asynchronously, which cut their integration time by 60%. A gamification engine tracks customer tasks such as funding an account, paying bills and buying data, and pays cashback automatically.",
+        "MySQL and Google Cloud Spanner queries, backed by Redis caching, keep 10M+ daily eligibility checks under 100ms."
+      ],
+      "tech": ["Java", "Spring Boot", "Kafka", "RabbitMQ", "Cloud Spanner", "MySQL", "Redis", "Kubernetes"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 1
+    },
+    {
+      "title": "MISPay Buy Now, Pay Later",
+      "slug": "mispay-bnpl",
+      "category": "product",
+      "role": "Senior Backend Developer, MISPay",
+      "summary": "Microservices for a BNPL platform in Riyadh, including a Go and Kafka CDC pipeline for near-real-time data sync, a Backoffice and a Merchant Panel.",
+      "description": [
+        "MISPay provides a Buy Now, Pay Later service: customers buy goods and services immediately and pay in instalments over time.",
+        "I build and operate Go, NestJS and Java microservices on Kubernetes and GCP, communicating asynchronously over Kafka, with PostgreSQL, MongoDB and Redis for storage.",
+        "I built a high-performance change data capture pipeline in Go and Kafka. Goroutines process changes concurrently, which eliminated consumer lag and gave near-real-time data synchronisation.",
+        "I also engineered a Backoffice system that streamlines staff operations, a Merchant Panel for registered merchants, and internal packages that standardise service development."
+      ],
+      "tech": ["Go", "NestJS", "Java", "Kafka", "PostgreSQL", "MongoDB", "Redis", "Kubernetes", "GCP", "Terraform"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 2
+    },
+    {
+      "title": "FiberOne SMS gateway",
+      "slug": "fiberone-sms-gateway",
+      "category": "product",
+      "role": "Full Stack Developer, Novaji Introserve",
+      "summary": "High-availability, multi-tenant SMS gateway processing millions of daily requests at 99.9% uptime for 5M+ customers and enterprises.",
+      "description": [
+        "FiberOne is a Twilio-like platform for bulk SMS, OTP delivery and transactional messaging, with webhook support that reduced client integration time by 60%.",
+        "Message queuing and retry mechanisms absorb high-volume concurrent traffic without degrading the service, and intelligent routing across multiple telecom aggregators reduced delivery failures by 25%.",
+        "I designed the API authentication, rate limiting and billing for the multi-tenant platform, built admin dashboards for campaigns, analytics and billing, and improved API response times by 30% with query optimisation, Redis caching and asynchronous processing."
+      ],
+      "tech": ["REST APIs", "Redis", "Message queues", "Webhooks", "Rate limiting", "DigitalOcean", "Linux"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 3
+    },
+    {
+      "title": "AWS EKS with Terraform",
+      "slug": "aws-eks-terraform",
+      "category": "infrastructure",
+      "role": "DevOps project",
+      "summary": "A multi-AZ VPC and an autoscaling EKS cluster defined entirely in Terraform, running a containerised Express and MongoDB app.",
+      "description": [
+        "Provisioned a VPC across multiple availability zones, with subnets, an internet gateway and route tables, plus an EKS cluster with an autoscaling managed node group, IAM roles and EKS access entries, all in Terraform.",
+        "Deployed a containerised Express and MongoDB application using Kubernetes Deployments, Services, ConfigMaps and Secrets."
+      ],
+      "tech": ["Terraform", "AWS", "EKS", "VPC", "IAM", "Kubernetes", "Express", "MongoDB"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 4
+    },
+    {
+      "title": "GKE and GCP networking with Terraform",
+      "slug": "gke-gcp-networking-terraform",
+      "category": "infrastructure",
+      "role": "DevOps project",
+      "summary": "A private-subnet VPC with Cloud Router, Cloud NAT and firewall rules for a GKE cluster, with Terraform state in a GCS bucket.",
+      "description": [
+        "Built a custom VPC with private subnets, Cloud Router, Cloud NAT and firewall rules for a GKE cluster, with Terraform state stored remotely in a GCS bucket.",
+        "Provisioned Compute Engine VMs with service accounts and startup provisioning scripts."
+      ],
+      "tech": ["Terraform", "GCP", "GKE", "Cloud NAT", "Compute Engine", "GCS"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 5
+    },
+    {
+      "title": "GitOps, Helm and Ingress on Kubernetes",
+      "slug": "gitops-helm-ingress",
+      "category": "infrastructure",
+      "role": "DevOps project",
+      "summary": "A full-stack voting app delivered with ArgoCD, plus Spring Boot and Flask services packaged as Helm charts with autoscaling and Ingress routing.",
+      "description": [
+        "Delivered a full-stack voting app with ArgoCD GitOps: a frontend, an API and a MongoDB StatefulSet with persistent volumes.",
+        "Packaged Spring Boot and Python Flask services as Helm charts with horizontal pod autoscaling and Ingress, managed releases with Helmfile, and set up path- and host-based Ingress routing for microservices."
+      ],
+      "tech": ["Kubernetes", "ArgoCD", "Helm", "Helmfile", "Ingress", "HPA", "Spring Boot", "Flask", "MongoDB"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": true,
+      "order": 6
+    },
+    {
+      "title": "Linux automation and security scripting",
+      "slug": "linux-automation-security-scripting",
+      "category": "infrastructure",
+      "role": "DevOps project",
+      "summary": "Bash tooling: a cross-distro update script, a scanner for compromised npm packages, and a Traefik reverse proxy with Docker service discovery.",
+      "description": [
+        "Wrote a cross-distro (Debian, Ubuntu, Arch, Fedora) system update script with logging and error handling.",
+        "Built a multi-project scanner that detects compromised npm package versions after a supply-chain attack.",
+        "Set up a Traefik reverse proxy with Docker service discovery for multi-container workloads."
+      ],
+      "tech": ["Bash", "Linux", "Docker", "Traefik", "npm"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "title": "Cloudenly",
+      "slug": "cloudenly",
+      "category": "product",
+      "role": "Backend Developer",
+      "summary": "HR and payroll software for businesses in Nigeria and emerging African markets, built as Node.js microservices.",
+      "description": [
+        "Cloudenly digitises HR and payroll operations, helping businesses in Nigeria and across emerging African markets work more efficiently and transparently.",
+        "I worked on its backend: microservices built with Node.js, Express and GraphQL, using PostgreSQL, MySQL and MongoDB, Redis, and RabbitMQ for messaging between services."
+      ],
+      "tech": ["Node.js", "Express", "GraphQL", "Microservices", "RabbitMQ", "Redis", "PostgreSQL", "MongoDB"],
+      "repoUrl": null,
+      "liveUrl": "https://cloudenly.com/",
+      "featured": false,
+      "order": 8
+    },
+    {
+      "title": "Switch2Zero",
+      "slug": "switch2zero",
+      "category": "product",
+      "role": "Full Stack Developer",
+      "summary": "A platform for reducing carbon footprints, connected to Shopify and Salesforce.",
+      "description": [
+        "Switch2Zero is a platform for reducing carbon footprints, with integrations into Shopify and Salesforce.",
+        "I worked across the stack: NestJS APIs, a Next.js frontend with Redux Toolkit, Strapi for content and PostgreSQL, deployed with Docker on AWS."
+      ],
+      "tech": ["TypeScript", "NestJS", "Next.js", "Strapi", "PostgreSQL", "Redux Toolkit", "Docker", "AWS"],
+      "repoUrl": null,
+      "liveUrl": "https://www.switch2zero.com/",
+      "featured": false,
+      "order": 9
+    },
+    {
+      "title": "FanPass",
+      "slug": "fanpass",
+      "category": "product",
+      "role": "Frontend Developer",
+      "summary": "A global marketplace for buying and selling football match tickets, serving fans in the UK, Spain, Germany and France.",
+      "description": [
+        "FanPass is a ticket resale platform for buyers and sellers of football match tickets across English, Spanish, German and French leagues.",
+        "I built its React frontend with TypeScript, Redux and Redux Saga."
+      ],
+      "tech": ["TypeScript", "React", "Redux", "Redux Saga"],
+      "repoUrl": null,
+      "liveUrl": "https://www.fanpass.co.uk/",
+      "featured": false,
+      "order": 10
+    },
+    {
+      "title": "Mealmap",
+      "slug": "mealmap",
+      "category": "product",
+      "role": "Full Stack Developer",
+      "summary": "An online food ordering platform where restaurants register their stores and customers order from any of them.",
+      "description": [
+        "Mealmap is an online food commerce and ordering platform: restaurant owners register their stores, and customers order from a wide selection of restaurants.",
+        "I built NestJS APIs, a Next.js storefront and a React admin, with Strapi for content and PostgreSQL for data."
+      ],
+      "tech": ["TypeScript", "NestJS", "Next.js", "React", "Strapi", "PostgreSQL", "Docker", "AWS"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": false,
+      "order": 11
+    },
+    {
+      "title": "TaskMe",
+      "slug": "taskme",
+      "category": "product",
+      "role": "Full Stack Developer",
+      "summary": "Pro and client apps that let people find and hire local artisans for a wide range of tasks.",
+      "description": [
+        "TaskMe is a platform for finding and hiring local artisans, with a Pro app for artisans and a Client app for customers.",
+        "I worked across the stack with NestJS, Redis and PostgreSQL on the backend, React Native for mobile and Next.js for the web."
+      ],
+      "tech": ["TypeScript", "NestJS", "Redis", "PostgreSQL", "React Native", "Next.js"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": false,
+      "order": 12
+    },
+    {
+      "title": "ThatApp",
+      "slug": "thatapp",
+      "category": "product",
+      "role": "Frontend Developer",
+      "summary": "Automates, backs up and synchronises data with CRM networks such as Podio, Salesforce and Shopify.",
+      "description": [
+        "ThatApp automates, backs up and synchronises data with CRM networks such as Podio, Salesforce and Shopify.",
+        "I built frontend features in React with Redux and the Context API."
+      ],
+      "tech": ["React", "JavaScript", "Redux", "Context API"],
+      "repoUrl": null,
+      "liveUrl": null,
+      "featured": false,
+      "order": 13
+    }
+  ],
+  "posts": []
+}

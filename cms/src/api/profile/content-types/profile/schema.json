@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": "Name, headline, summary and contact links shown across the site"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "blocks"
+    },
+    "location": {
+      "type": "string",
+      "default": "Lagos, Nigeria"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat"
+    },
+    "education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.education"
+    },
+    "availableForWork": {
+      "type": "boolean",
+      "default": true
+    },
+    "resume": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

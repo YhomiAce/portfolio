@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skill_groups",
+  "info": {
+    "singularName": "skill-group",
+    "pluralName": "skill-groups",
+    "displayName": "Skill group",
+    "description": "Skills grouped by area; skills is a JSON array of strings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "skills": {
+      "type": "json"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

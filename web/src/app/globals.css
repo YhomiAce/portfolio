@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: `.dark` on <html>, set before paint by the theme script. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+}
+
+:root {
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --surface-2: #f3f4f2;
+  --fg: #16181d;
+  --muted: #555b67;
+  --border: #e3e5e1;
+  --accent: #0f766e;
+  --accent-fg: #ffffff;
+  --accent-soft: #e3f3ef;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0c0e12;
+  --surface: #13161c;
+  --surface-2: #1a1e26;
+  --fg: #eceef2;
+  --muted: #9ea5b2;
+  --border: #262b35;
+  --accent: #5eead4;
+  --accent-fg: #062521;
+  --accent-soft: #0f2f2b;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Long-form text (summary, project descriptions, posts). */
+.prose-body > * + * {
+  margin-top: 1rem;
+}
+.prose-body h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  letter-spacing: -0.01em;
+}
+.prose-body h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+.prose-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-body ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+.prose-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted);
+}
+.prose-body pre {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+.prose-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Motion: only for people who haven't asked for less of it. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @supports (animation-timeline: view()) {
+    .reveal-on-scroll {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

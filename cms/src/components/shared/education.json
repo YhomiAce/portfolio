@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_educations",
+  "info": {
+    "displayName": "Education",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "qualification": {
+      "type": "string",
+      "required": true
+    },
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "startYear": {
+      "type": "integer"
+    },
+    "endYear": {
+      "type": "integer"
+    }
+  }
+}
